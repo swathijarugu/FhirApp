@@ -5,25 +5,11 @@
     <title>SwathiJaruguExample-SMART-App</title>
   </head>
   <body>
-    <h1>Patient Name: <span id='name'></span></h1>
+    <h1>Patient Name: <span id='fname'></span></h1>
     <script type="text/javascript">
-        function getPatientName (pt) {
-            if (pt.name) {
-                var names = pt.name.map(function(name) {
-                    return name.given.join(" ") + " " + name.family.join(" ");
-                });
-                return names.join(" / ")
-            } else {
-                return "anonymous";
-            }
-        }
-
-        function displayPatient (pt) {
-            document.getElementById('name').innerHTML = getPatientName(pt);
-        }
         FHIR.oauth2.ready(function(smart){
             smart.patient.read().then(function(pt) {
-                displayPatient (pt);
+                document.getElementById('fname').innerHTML = pt.name[0].given.join(' ');
             });
         });
     </script>
