@@ -19,7 +19,7 @@
     <script type="text/javascript">      
         FHIR.oauth2.ready(function(smart){
             smart.patient.read().then(function(pt) {
-                document.getElementById('fname').innerHTML = "ABC1";
+                document.getElementById('fname').innerHTML = pt.name[0].given;
             });
         });
     </script>
