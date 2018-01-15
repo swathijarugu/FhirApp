@@ -17,14 +17,14 @@
     </table>
     </div>
     <script type="text/javascript">      
-        var smart = FHIR.client(demo),
+        //var smart = FHIR.client(demo),
         //pt = smart.patient;
-        //document.getElementById('fname').innerHTML = "Swathi";
-        FHIR.oauth2.ready(function(smart){
+        document.getElementById('fname').innerHTML = "Swathi";
+        /*FHIR.oauth2.ready(function(smart){
             smart.patient.read().then(function(pt) {
                 document.getElementById('fname').innerHTML = "Swathi";
             });
-        });
+        });*/
     </script>
   </body>
 </html>
