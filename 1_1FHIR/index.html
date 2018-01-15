@@ -16,12 +16,13 @@
         </tr>
     </table>
     </div>
-    <script type="text/javascript">
-        FHIR.oauth2.ready(function(smart){
+    <script type="text/javascript">      
+        document.getElementById('fname').innerHTML = "Swathi";
+        /*FHIR.oauth2.ready(function(smart){
             smart.patient.read().then(function(pt) {
                 document.getElementById('fname').innerHTML = "Swathi";
             });
-        });
+        });*/
     </script>
   </body>
 </html>
